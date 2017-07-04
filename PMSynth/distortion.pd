@@ -1,0 +1,32 @@
+#N canvas -8 -8 1280 717 10;
+#X obj 356 179 *~ 4;
+#X obj 357 352 *~;
+#X obj 372 325 - 0.01;
+#X obj 356 126 bp~ 2000 1;
+#X obj 384 102 mtof;
+#X obj 358 280 bp~ 2000 1;
+#X obj 386 256 mtof;
+#X obj 340 103 inlet~;
+#X obj 356 382 outlet~;
+#X obj 357 207 clip~ -0.5 0.5;
+#X obj 431 21 knob 42 42 0 127 0 0 empty empty Clarity 4 -8 1 12 -262144
+-1 -1 32 1;
+#X obj 471 81 knob 42 42 1 50 1 0 empty empty Gain 9 -8 1 12 -262144
+-1 -1 0 1;
+#X obj 485 197 knob 42 42 0 127 0 0 empty empty Tone 8 -8 1 12 -262144
+-1 -1 0 1;
+#X obj 497 267 knob 42 42 0.01 10.01 1 0 empty empty Volume 2 -8 1
+12 -262144 -1 -1 0 1;
+#X connect 0 0 9 0;
+#X connect 1 0 8 0;
+#X connect 2 0 1 1;
+#X connect 3 0 0 0;
+#X connect 4 0 3 1;
+#X connect 5 0 1 0;
+#X connect 6 0 5 1;
+#X connect 7 0 3 0;
+#X connect 9 0 5 0;
+#X connect 10 0 4 0;
+#X connect 11 0 0 1;
+#X connect 12 0 6 0;
+#X connect 13 0 2 0;

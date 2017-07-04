@@ -1,0 +1,24 @@
+#N canvas 0 50 450 300 10;
+#X obj 185 235 noteout;
+#X obj 185 207 makenote;
+#X obj 45 32 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 45 52 metro;
+#X msg 102 19 stop;
+#X floatatom 197 9 5 1 2000 0 Tempo - -, f 5;
+#X floatatom 168 61 5 0 0 0 - - -, f 5;
+#X obj 151 30 expr 60000/$f1;
+#X obj 315 60 table Cmajor 27;
+#X msg 301 134 \; Cmajor 0 48 50 52 53 55 57 59 60 62 64 65 67 69 71
+72 74 76 77 79 81 83 84 86 89 91 93 95 96;
+#X obj 190 174 tabread;
+#X msg 202 101 set Cmajor;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 3 0;
+#X connect 4 0 3 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 7 0 3 1;
+#X connect 10 0 1 0;
+#X connect 11 0 10 0;
